@@ -12,3 +12,5 @@ if (result % 3 == 0) {
 } else {
   console.log(result + "는 3의 배수가 아닙니다")
 }
+
+// github 수정 test
