@@ -39,6 +39,16 @@ function calculate() {
     case "/":
       result = num1 / num2
   }
-
   document.querySelector("#result").value = result
+
+
+  // if (document.querySelector("#oper").value == "+") {
+  //   console.log(result = parseInt(num1) + parseInt(num2))
+  // } else if (document.querySelector("#oper").value == "-") {
+  //   console.log(result = parseInt(num1) - parseInt(num2))
+  // } else if (document.querySelector("#oper").value == "*") {
+  //   console.log(result = parseInt(num1) * parseInt(num2))
+  // } else if (document.querySelector("#oper").value == "/") {
+  //   console.log(result = parseInt(num1) / parseInt(num2))
+  // }
 }
