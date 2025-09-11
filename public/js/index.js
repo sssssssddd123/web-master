@@ -20,3 +20,10 @@ function changeTest() {
   // 화면요소를 선택
   document.querySelector('#test1').innerHTML = "안녕";
 }
+
+// condition.js에서 활용
+// function changeValue() {
+//   let num = 78;
+//   console.log(document.querySelector("#user_value").value);
+//   document.querySelector("#user_value").value = num
+// }
