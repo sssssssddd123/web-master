@@ -29,26 +29,27 @@ function calculate() {
   let opr = document.querySelector("#oper").value
   let result = 0
 
-  switch (opr) {
-    case "+":
-      result = parseInt(num1) + parseInt(num2); break;
-    case "-":
-      result = num1 - num2; break;
-    case "*":
-      result = num1 * num2; break;
-    case "/":
-      result = num1 / num2
-  }
-  document.querySelector("#result").value = result
-
-
-  // if (document.querySelector("#oper").value == "+") {
-  //   console.log(result = parseInt(num1) + parseInt(num2))
-  // } else if (document.querySelector("#oper").value == "-") {
-  //   console.log(result = parseInt(num1) - parseInt(num2))
-  // } else if (document.querySelector("#oper").value == "*") {
-  //   console.log(result = parseInt(num1) * parseInt(num2))
-  // } else if (document.querySelector("#oper").value == "/") {
-  //   console.log(result = parseInt(num1) / parseInt(num2))
+  // switch (opr) {
+  //   case "+":
+  //     result = parseInt(num1) + parseInt(num2); break;
+  //   case "-":
+  //     result = num1 - num2; break;
+  //   case "*":
+  //     result = num1 * num2; break;
+  //   case "/":
+  //     result = num1 / num2
   // }
+  // document.querySelector("#result").value = result
+
+  if (document.querySelector("#oper").value == "+") {
+    result = parseInt(num1) + parseInt(num2)
+  } else if (document.querySelector("#oper").value == "-") {
+    result = parseInt(num1) - parseInt(num2)
+  } else if (document.querySelector("#oper").value == "*") {
+    result = parseInt(num1) * parseInt(num2)
+  } else if (document.querySelector("#oper").value == "/") {
+    result = parseInt(num1) / parseInt(num2)
+  }
+
+  document.querySelector("#result").value = result
 }
