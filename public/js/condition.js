@@ -8,7 +8,7 @@
 
 function returnNum() {
   let score = document.querySelector("#user_value").value
-  
+
   if (score >= 90) {
     console.log("아주 잘했습니다.")
   } else if (score >= 80) {
@@ -20,4 +20,25 @@ function returnNum() {
   } else {
     console.log("낙제입니다.")
   }
+}
+
+function calculate() {
+  let num1 = document.querySelector("#user1").value
+  let num2 = document.querySelector("#user2").value
+
+  let opr = document.querySelector("#oper").value
+  let result = 0
+
+  switch (opr) {
+    case "+":
+      result = parseInt(num1) + parseInt(num2); break;
+    case "-":
+      result = num1 - num2; break;
+    case "*":
+      result = num1 * num2; break;
+    case "/":
+      result = num1 / num2
+  }
+
+  document.querySelector("#result").value = result
 }
