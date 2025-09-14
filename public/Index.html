@@ -1,17 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2일차</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <style>
+        div {
+            width: 200px;
+            height: auto;
+            padding-bottom: 20px;
+            margin: 0 auto;
+            text-align: center;
+            overflow: hidden;
+            border: 1px solid black;
+        }
+
+        h3{
+            margin-bottom: 0px;
+        }
+
+        ul {
+            width: 80%;
+            height: 80%;
+            padding: 20px;
+            margin: 0px;
+        }
+
+        li {
+            float: left;
+        }
+    </style>
+    </script>
 </head>
 
 <body>
-    <h3>오늘은 반복문, 함수, 이벤트</h3>
-    <script src="./js/2nd/todo.js"></script>
+    <div>
+        <h3>반복문, 함수, 이벤트</h3>
+        <script src="./js/2nd/todo.js"></script>
 
+        <h3>계산기</h3>
+
+        <ul style="list-style: none;">
+            <li>
+                <input type="text" value="" id="num0" size="5">
+                <select name="" id="selector">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="*">*</option>
+                    <option value="/">/</option>
+                </select>
+            </li>
+
+            <li>
+                <input type="text" value="" id="num1" size="5">
+            </li>
+
+            <li>
+                <input type="text" value="" id="num2" size="5">
+                <button onclick="calculate()">계산하기</button>
+            </li>
+        </ul>
+    </div>
 </body>
 
 </html>
