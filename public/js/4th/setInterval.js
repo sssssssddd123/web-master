@@ -1,6 +1,6 @@
 // setInterval.js
-
 document.querySelector('table').remove();
+
 let str = 'Lorem ipsum'
 //  dolor sit, amet consectetur adipisicing elit. Porro, iusto. Rem et repellendus autem dolores saepe voluptatum similique optio est doloribus facilis nihil consequuntur sed, suscipit nisi. Incidunt, aperiam excepturi.'
 // console.log(str.length);
@@ -19,7 +19,7 @@ strAry.forEach(function (item, idx, ary) {
 
 document.querySelector('#search_word').addEventListener('click',
   function () {
-    let search = document.querySelector('#user_vlaue').value;
+    let search = document.querySelector('#user_value').value;
 
     let is_exist = false;
 
@@ -36,13 +36,13 @@ document.querySelector('#search_word').addEventListener('click',
       alert('찾는 값이 없습니다.');
     }
 
-    document.querySelector('#user_vlaue').value = '';
+    document.querySelector('#user_value').value = '';
 
     console.log(document.querySelectorAll('div.inner').length);
 
   })
 
-let timing = 5;
+let timing = 11;
 let end = true;
 
 setInterval(function () {
