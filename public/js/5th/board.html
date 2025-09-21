@@ -2,79 +2,83 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      background-color: #f4f7fa;
-      margin: 0;
-      padding: 20px;
-    }
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		.data-container {
+			background-color: #f2f7ff;
+			/* 연한 하늘색 */
+			border-radius: 8px;
+			padding: 20px;
+			max-width: 600px;
+			margin: 0 auto;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+		}
 
-    .data-container {
-      background-color: #ffffff;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      padding: 20px;
-      max-width: 600px;
-      margin: auto;
-    }
+		.comments div {
+			display: flex;
+			justify-content: space-between;
+			background-color: #ffffff;
+			padding: 10px 15px;
+			margin-bottom: 10px;
+			border-radius: 6px;
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+			word-wrap: break-word;
+		}
 
-    .data-container div {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 15px;
-      padding: 10px 0;
-      border-bottom: 1px solid #eee;
-    }
+		.comments div span {
+			flex: 1;
+			text-align: left;
+		}
 
-    .data-container div:last-child {
-      border-bottom: none;
-    }
+		/* id는 왼쪽, 진하게 */
+		.comments div span.data-id {
+			text-align: left;
+			font-weight: bold;
+			color: #3a3a3a;
+		}
 
-    .data-id {
-      font-weight: bold;
-      color: #3a3a3a;
-    }
+		.comments div span.data-title {
+			text-align: center;
+			font-weight: bold;
+			color: #648544;
+		}
 
-    .data-title {
-      color: #4e74a7;
-      font-size: 18px;
-    }
 
-    .data-author {
-      font-style: italic;
-      color: #a0a0a0;
-    }
-
-    .data-container div:hover {
-      background-color: #f1f9ff;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-  </style>
+		/* author는 오른쪽, 진하게 */
+		.comments div span.data-author {
+			text-align: right;
+			font-weight: bold;
+			color: #3a3a3a;
+		}
+	</style>
 </head>
 
 <body>
-  <div class="container">
-    <form action="./index.html" method="get">
-      <input type="text" name="title" placeholder="Enter title" id="title">
-      <input type="text" name="author" placeholder="Enter author" id="author">
-      <input type="submit" value="추가">
-    </form>
-  </div>
+	<div class="container">
+		<form action="./index.html" method="get" name="postForm">
+			<input type="text" name="title" placeholder="Enter title" id="title">
+			<input type="text" name="author" placeholder="Enter author" id="author">
+			<input type="submit" value="추가">
+		</form>
+	</div>
 
-  <div class="data-container" id="data-container">
-    <div class="comments">
-      <span></span>
-    </div>
-  </div>
+	<div class="data-container">
+		<h2>학생 목록</h3>
+	</div>
+
+	<div class="data-container" id="data-container">
+		<div class="comments">
+			<!-- <div>
+        <span></span>
+      </div> -->
+		</div>
+	</div>
 
 
-  <script src="./db.js"></script>
-  <script src="./data.json"></script>
+	<script src="./db.js"></script>
+	<script src="./data.json"></script>
 </body>
 
 </html>
