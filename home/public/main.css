@@ -44,7 +44,8 @@ body {
 	color: grey;
 }
 
-input, div {
+input,
+div {
 	box-sizing: border-box;
 }
 
@@ -69,4 +70,10 @@ input, div {
 	border: none;
 	background: lightgrey;
 	border-radius: 5px;
+}
+
+.detail-bg {
+	background: white;
+	padding: 15px;
+	margin-top: 10px;
 }
