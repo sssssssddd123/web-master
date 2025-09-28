@@ -9,15 +9,21 @@
 </head>
 
 <body class="grey-bg">
-
 	<%- include('nav.ejs') %>
+	<div class="white-bg">
+		<div class="detail-bg">
+			<a href="/list">List</a>
+		</div>
+	</div>
 
-	<form class="form-box" action="/add" method="post">
-		<h4>글쓰기</h4>
-		<input name="title">
-		<input name="content">
-		<button type="submit">전송</button>
-	</form>
+	<div class="white-bg">
+		<form class="form-box" action="/add" method="post">
+			<h4>글쓰기</h4>
+			<input name="title">
+			<input name="content">
+			<button type="submit">전송</button>
+		</form>
+	</div>
 
 </body>
 

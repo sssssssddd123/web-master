@@ -12,16 +12,18 @@
 	<%- include("nav.ejs") %>
 	<div class="white-bg">
 		<div class="detail-bg">
-			<a href="/list">Back</a>
-		</div>
-
-		<div class="detail-bg">
-			<div class="list-box">
-				<h4><%= post.title %></h4>
-				<p><%= post.content %></p>
-			</div>
+			<a href="/list">List</a>
+			<a href="/edit/<%= post._id %>">Edit</a>
 		</div>
 	</div>
+
+	<div class="white-bg">
+		<div class="list-box">
+			<h4><%= post.title %></h4>
+			<p><%= post.content %></p>
+		</div>
+	</div>
+	
 </body>
 
 </html>

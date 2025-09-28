@@ -3,10 +3,13 @@ body {
 }
 
 .nav {
-	display: flex;
+	/* display: flex; */
 	padding: 15px;
+	margin: 10px;
 	align-items: center;
 	background: white;
+	border-top-left-radius: 30px;
+	border-top-right-radius: 30px;
 }
 
 .nav a {
@@ -19,13 +22,16 @@ body {
 
 /* ejs */
 .grey-bg {
+	width: 500px;
+	margin: auto;
 	background: #eee;
 }
 
 .white-bg {
 	background: white;
-	margin: 20px;
-	border-radius: 5px;
+	margin: 10px;
+	border-bottom-left-radius: 30px;
+	border-bottom-right-radius: 30px;
 }
 
 .list-box {
@@ -51,9 +57,10 @@ div {
 
 .form-box {
 	background: white;
-	padding: 25px;
-	margin: 20px;
-	border-radius: 8px;
+	padding: 10px;
+	padding-bottom: 30px;
+	border-bottom-left-radius: 30px;
+	border-bottom-right-radius: 30px;
 }
 
 .form-box input {
@@ -76,4 +83,5 @@ div {
 	background: white;
 	padding: 15px;
 	margin-top: 10px;
+	border-radius: 5%;
 }
