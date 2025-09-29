@@ -14,12 +14,13 @@ fetch(`http://localhost:3000/emp`)
 	});
 
 function makeRow(employee) {
-	let fields = ["EMPNO", "ENAME", "JOB", "SAL"];
+	let fields = ["EMPNO", "ENAME", "JOB", "HIREDATE", "DEPTNO"];
 	let tr = document.createElement("tr");
 	tr.setAttribute('data-eno', employee.EMPNO);
 	fields.forEach(field => {
 		let td = document.createElement("td");
 		td.innerHTML = employee[field];
+		td.setAttribute('class', 'list-box')
 
 		tr.appendChild(td);
 	})
@@ -27,6 +28,7 @@ function makeRow(employee) {
 	let btn = document.createElement("button");
 	btn.innerHTML = "삭제";
 	btn.addEventListener('click', deleteFunc);
+	btn.setAttribute('class', 'delete-btn')
 
 	let td = document.createElement("td");
 	td.appendChild(btn)
@@ -54,6 +56,33 @@ function deleteFunc(e) {
 		});
 }
 
+
+// 이벤트.
+document.forms[0].addEventListener('submit', function(e) {
+	// 기본기능 차단
+	e.preventDefault();
+	let eno = document.querySelector('#empNo').value;
+	let ename = document.querySelector('#empName').value;
+	let job = document.querySelector('#jobTitle').value;
+	let hd = document.querySelector('#hireDate').value;
+	let deptno = document.querySelector('#deptNo').value;
+	console.log(eno, ename, job, hd, deptno)
+
+	// json 포맷으로 서버 전달
+	fetch('http://localhost:3000/emp', {
+			method: 'post',
+			headers: { "Content-Type": "application/json;charset=UTF-8" },
+			body: JSON.stringify({ eno, ename, job, hd, deptno })
+		})
+		.then(response => {
+			response.json();
+		}).then(result => {
+			console.log(result)
+		})
+		.catch(err => {
+			console.log(err)
+		})
+})
 
 
 
