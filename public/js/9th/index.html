@@ -16,9 +16,9 @@
 <body>
 	<!-- empno, ename, job, hiredate, deptno -->
 	<div class="container">
-		<!-- 사원 정보 입력 -->
+		<!-- 사원 등록 -->
 		<div class="form-box">
-			<h2>사원 정보 입력</h2>
+			<h2>사원 등록</h2>
 			<form action="" method="post">
 				<label for="empNo">사번</label>
 				<input type="text" id="empNo" name="empNp" required>
@@ -40,6 +40,24 @@
 					<button type="reset" class="reset-btn">재입력</button>
 				</div>
 			</form>
+
+			<!-- 사원 검색 -->
+			<h2>사원 검색</h2>
+			<form action="../../index.html" id="searchForm">
+				<label for="searchName">이름</label>
+				<input type="text" id="searchName" name="searchName">
+
+				<label for="searchJob">직무</label>
+				<input type="text" id="searchJob" name="searchJob">
+
+				<label for="searchDept">부서 번호</label>
+				<input type="number" id="searchDept" name="searchDept">
+
+				<div class="btn-group">
+					<button type="button" class="search-btn">검색</button>
+					<button type="reset" class="reset-btn">재입력</button>
+				</div>
+			</form>
 		</div>
 
 		<!-- 사원 데이터 목록 -->
@@ -51,8 +69,8 @@
 						<th>사번</th>
 						<th>이름</th>
 						<th>직무</th>
-						<th>입사일</th>
-						<th>부서번호</th>
+						<th>급여</th>
+						<th>부서이름</th>
 						<th>삭제</th>
 					</tr>
 				</thead>

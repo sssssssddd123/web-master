@@ -4,7 +4,7 @@ fetch(`http://localhost:3000/emp`)
 	.then(response =>
 		response.json()
 	).then(result => {
-		console.log(result);
+		// console.log(result);
 		result.forEach(item => {
 			let tr = makeRow(item);
 			document.querySelector("#list").appendChild(tr);
@@ -14,7 +14,7 @@ fetch(`http://localhost:3000/emp`)
 	});
 
 function makeRow(employee) {
-	let fields = ["EMPNO", "ENAME", "JOB", "HIREDATE", "DEPTNO"];
+	let fields = ["EMPNO", "ENAME", "JOB", "SAL", "DNAME"];
 	let tr = document.createElement("tr");
 	tr.setAttribute('data-eno', employee.EMPNO);
 	fields.forEach(field => {
@@ -36,6 +36,7 @@ function makeRow(employee) {
 	return tr;
 }
 
+// 삭제 기능
 function deleteFunc(e) {
 	console.log(this.parentElement.parentElement.dataset.eno);
 	let thisTr = this.parentElement.parentElement;
@@ -84,12 +85,29 @@ document.forms[0].addEventListener('submit', function(e) {
 		})
 })
 
+// 조건 검색
+document.querySelector('div.btn-group > .search-btn')
+	.addEventListener('click', function() {
+		const ename = document.querySelector('#searchName').value || 'ALL';
+		const job = document.querySelector('#searchJob').value || 'ALL';
+		const deptno = document.querySelector('#searchDept').value || '-1';
 
-
-
-
-
-
+		let url =
+			`http://localhost:3000/emp/${ename}/${job}/${deptno}`;
+		fetch(url)
+			.then((response) => response.json())
+			.then((result) => {
+				// console.log(result);
+				document.querySelector("#list").innerHTML = ""; // 목록 리스트 초기화
+				result.forEach(item => {
+					let tr = makeRow(item);
+					document.querySelector("#list").appendChild(tr);
+				});
+			})
+			.catch((err) => {
+				console.log(err);
+			})
+	})
 
 
 
