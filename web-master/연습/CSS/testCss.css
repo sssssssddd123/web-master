@@ -1,0 +1,100 @@
+/* 전체 화면 */
+body {
+	font-family: Arial, sans-serif;
+	background: #f9f9f9;
+	display: flex;
+	justify-content: center;
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	max-width: 480px;
+	/* 아이폰 화면에 맞춤 */
+	width: 100%;
+	padding: 10px;
+}
+
+/* 공통 박스 스타일 */
+.box {
+	border: 2px solid #4a4ae4;
+	border-radius: 12px;
+	padding: 15px;
+	margin: 10px 0;
+	background: #fff;
+	text-align: center;
+	color: #333;
+}
+
+/* 상단 날씨 */
+.weather-container {
+	display: flex;
+	justify-content: space-between;
+	gap: 10px;
+}
+
+.weather-box {
+	flex: 1;
+	font-weight: bold;
+	color: #4a4ae4;
+}
+
+/* 중앙 체크리스트 */
+.checklist-box {
+	text-align: left;
+}
+
+.checklist-box h2 {
+	margin-top: 0;
+	font-size: 18px;
+	color: #4a4ae4;
+}
+
+.checklist-box input {
+	padding: 5px;
+	margin-right: 5px;
+	border: 1px solid #ccc;
+	border-radius: 6px;
+}
+
+.checklist-box button {
+	padding: 5px 10px;
+	border: none;
+	border-radius: 6px;
+	background: #4a4ae4;
+	color: #fff;
+	cursor: pointer;
+}
+
+.checklist-box button:hover {
+	background: #3737c5;
+}
+
+#itemList {
+	margin-top: 10px;
+}
+
+#itemList ul {
+	list-style: none;
+	padding: 0;
+}
+
+#itemList li {
+	padding: 5px;
+	border-bottom: 1px solid #ddd;
+	display: flex;
+	justify-content: space-between;
+}
+
+/* 하단 주식 & 코인 */
+.market-box h2 {
+	margin-top: 0;
+	font-size: 18px;
+	color: #4a4ae4;
+}
+
+#chart {
+	margin-top: 15px;
+	width: 100%;
+	height: 200px;
+}

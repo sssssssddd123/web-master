@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		.data-container {
+			background-color: #f2f7ff;
+			/* 연한 하늘색 */
+			border-radius: 8px;
+			padding: 20px;
+			max-width: 600px;
+			margin: 0 auto;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+		}
+
+		.comments div {
+			display: flex;
+			justify-content: space-between;
+			background-color: #ffffff;
+			padding: 10px 15px;
+			margin-bottom: 10px;
+			border-radius: 6px;
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+			word-wrap: break-word;
+		}
+
+		.comments div span {
+			flex: 1;
+			text-align: left;
+		}
+
+		/* id는 왼쪽, 진하게 */
+		.comments div span.data-id {
+			text-align: left;
+			font-weight: bold;
+			color: #3a3a3a;
+		}
+
+		.comments div span.data-title {
+			text-align: center;
+			font-weight: bold;
+			color: #648544;
+		}
+
+
+		/* author는 오른쪽, 진하게 */
+		.comments div span.data-author {
+			text-align: right;
+			font-weight: bold;
+			color: #3a3a3a;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<form action="./index.html" method="get" name="postForm">
+			<input type="text" name="title" placeholder="Enter title" id="title">
+			<input type="text" name="author" placeholder="Enter author" id="author">
+			<input type="submit" value="추가">
+		</form>
+	</div>
+
+	<div class="data-container">
+		<h2>학생 목록</h3>
+	</div>
+
+	<div class="data-container" id="data-container">
+		<div class="comments">
+			<!-- <div>
+        <span></span>
+      </div> -->
+		</div>
+	</div>
+
+
+	<script src="./db.js"></script>
+	<script src="./data.json"></script>
+</body>
+
+</html>
