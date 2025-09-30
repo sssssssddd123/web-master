@@ -12,7 +12,7 @@ fetch(`http://localhost:3000/emp`)
 	}).catch((err) => {
 		console.log("err");
 	});
-
+ 
 function makeRow(employee) {
 	let fields = ["EMPNO", "ENAME", "JOB", "SAL", "DNAME"];
 	let tr = document.createElement("tr");
