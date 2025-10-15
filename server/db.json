@@ -1,0 +1,118 @@
+{
+  "points": [
+    {
+      "id": "user01",
+      "point": 50
+    },
+    {
+      "id": "user02",
+      "point": 120
+    },
+    {
+      "id": "user03",
+      "point": 90
+    },
+    {
+      "id": "user04",
+      "point": 20
+    },
+    {
+      "id": "user05",
+      "point": 80
+    }
+  ],
+  "posts": [
+    {
+      "id": "1",
+      "title": "json test",
+      "author": "user01"
+    },
+    {
+      "id": "2",
+      "title": "222",
+      "author": "222"
+    },
+    {
+      "id": "3",
+      "title": "333",
+      "author": "333"
+    },
+    {
+      "id": "4",
+      "title": "444",
+      "author": "444"
+    },
+    {
+      "id": "5",
+      "title": "555",
+      "author": "555"
+    },
+    {
+      "id": "f614",
+      "title": "f614",
+      "author": "f614"
+    },
+    {
+      "id": "548d",
+      "title": "548d",
+      "author": "548d"
+    },
+    {
+      "id": "f160",
+      "title": "f160",
+      "author": "f160"
+    },
+    {
+      "id": "b02d",
+      "title": "123",
+      "author": "123"
+    },
+    {
+      "id": "a1ef",
+      "title": "12313",
+      "author": "12313"
+    },
+    {
+      "id": "0a15",
+      "title": "11",
+      "author": "1"
+    },
+    {
+      "id": "2646",
+      "title": "2131",
+      "author": "123"
+    },
+    {
+      "id": "eb4b",
+      "title": "55123",
+      "author": "1213"
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "content": "1번의 댓글",
+      "postId": 1
+    },
+    {
+      "id": "2",
+      "content": "2번의 댓글",
+      "postId": 2
+    },
+    {
+      "id": "3",
+      "content": "3번의 댓글",
+      "postId": 3
+    },
+    {
+      "id": "4",
+      "content": "4번의 댓글",
+      "postId": 4
+    },
+    {
+      "id": "5",
+      "content": "5번의 댓글",
+      "postId": 5
+    }
+  ]
+}
